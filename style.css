@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital@1&family=Montserrat:ital,wght@1,300&family=Open+Sans:wght@400;500&family=Source+Code+Pro:ital,wght@1,300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #271762;
+    color: white;
+    overflow-x: hidden;
+}
+ nav{
+     display: flex;
+     justify-content: space-between;
+ }
+
+a{
+    font-family: 'Source Code Pro', sans-serif;  
+}
+
+.home, .aboutus, .active, .projects, .footer{
+    background: #271762;
+    color: #fff;
+}
+.home{
+    height: 90vh;
+}
+.banner{
+    margin-top: 10rem;
+}
+.image img{
+    border-radius: 50%;
+    position: absolute;
+    right: 3%;
+    margin-top: 3rem;
+}
+h1, h2,h3{
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.banner h1 span{
+    border-bottom: 2px solid #fff;
+}
+
+.banner button:hover{
+    background: #000;
+    color: #fff;
+    transition: all ease-in-out;
+}
+
+a{
+    color: black;
+}
+/* About */
+
+.aboutus{
+    padding-top: 5rem;
+    justify-content: center;
+}
+p{
+    font-family: 'Source Code Pro', monospace;  
+}
+.aboutme{
+    margin-left: 15rem;
+   margin-top: 5rem;
+}
+.aboutme h2{
+    margin-bottom: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+.aboutme h2 span{
+    border-bottom: 2px solid #fff;
+}
+.aboutimg img{
+    margin-bottom: 4rem;
+    border-radius: 34%;
+}
+
+/* skill */
+.myskill{
+    background: #251755;
+    padding: 2rem;
+}
+.myskill h2{
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+/* Skill bar css */
+.skills{
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 20px;
+}
+.skill-name{
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+.skill-bar{
+    height: 14px;
+    background: #282828;
+    border-radius: 3px;
+}
+.skill-per{
+    height: 14px;
+    background: #d13639;
+    border: 3px;
+    position: relative;
+    animation: fillBars 2.5s 1;
+}
+
+.skill-per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background: #f1f1f1;
+    border-radius: 4px;
+    font-size: 12px;
+    top: -35px;
+    right: 0;
+    color: #000;
+    transform: translate(50%);
+}
+.skill-per::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #f1f1f1;
+    top: -20%;
+    right: 0;
+    transform: translate(50%) rotate(45deg);
+    border-radius: 2px;
+
+}
+@keyframes fillBars{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+/* Jobs */
+.jobs h3 span{
+    border-bottom:  2px solid red;
+}
+
+.gallery:hover {
+    transform: scale(1.4);
+  }
+
+  .footer h3 span{
+      border-bottom: 2px solid #fff;
+  }
+
+  /* go-up */
+  .goup{
+      width: 100vw;
+  }
+.goup button{
+    float: right;
+    position: absolute;
+    right: 2%;
+    margin-bottom: 2rem;
+    transform: translateY(-5rem);
+}
+.jobs button:hover{
+    background: #000;
+    color: #fff;
+}
+.aboutme button:hover{
+    background: #000;
+    color: #fff;
+}
+.footer button:hover{
+    background: #000;
+    color: #fff;
+}
+
+/* RESPONSIVENESS START HERE */
+@media only screen and (max-width: 768px) {
+    .banner{
+        margin-top: 2rem;
+    }
+   .image{
+       display: none;
+   }
+   .home{
+       height: 50vh;
+   }
+   .banner{
+       text-align: center;
+   }
+   /* About us section */
+   .aboutus{
+    margin-top: -20rem;
+    padding-top: 3rem;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.about-container{
+    flex-direction: column;
+    justify-content: center;
+}
+.aboutimg img{
+    width: 12rem;
+    border-radius: 47%;
+}
+.aboutme{
+    margin: 0;
+
+}
+/* ACTIVE JOB SECTION */
+.active-jobs{
+    flex-direction: column;
+    text-align: center;
+}
+.boxes{
+    display: none;
+}
+}
+
+
+/* RESPONSIVENESS END HERE */
